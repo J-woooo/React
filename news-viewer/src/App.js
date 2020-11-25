@@ -1,8 +1,10 @@
 import React from 'react';
-import NewsList from './components/NewsList';
+import { Route } from 'react-router-dom';
+import NewsPage from './pages/NewsPage';
 
 const App = () => {
-  return <NewsList />;
+  // ?는 값이 선택적이라는 의미 (있을수도 있고 없을수도 있다.)
+  return <Route path="/:category?" component={NewsPage} />;
 };
 
 export default App;
